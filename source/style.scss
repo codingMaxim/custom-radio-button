@@ -1,0 +1,36 @@
+html {
+  margin: 0;
+  box-sizing: border-box;
+}
+.radio-buttons {
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  > .custom-radio {
+    all: unset;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 20px;
+    background-color: aqua;
+    display: grid;
+    place-content: center;
+  }
+  > .custom-radio::before {
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s transform ease-in-out;
+    background-color: darkgreen;
+  }
+  > .custom-radio:checked::before {
+    transform: scale(1);
+  }
+  > .custom-radio:focus {
+    outline: 10px double darkgreen;
+    outline-offset: 5px;
+  }
+}
